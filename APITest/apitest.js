@@ -46,7 +46,7 @@ describe("API Reqres.in", () => {
   console.log("PATCH response:", data);
 
   expect(response.status).to.equal(200);
-  expect(data.name).to.equal("Fikri Update");
+  expect(data.name).to.equal("Fikri Luthfi D");
 });
 
   it("DELETE user", async () => {
