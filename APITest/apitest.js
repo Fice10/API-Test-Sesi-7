@@ -37,7 +37,7 @@ describe("API Reqres.in", () => {
       "x-api-key": "reqres-free-v1"
     },
     body: JSON.stringify({
-      name: "Fikri Update",
+      name: "Fikri Luthfi D",
       job: "QA"
     })
   });
