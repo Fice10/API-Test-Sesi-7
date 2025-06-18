@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-18T09:44:18.119Z",
+    "end": "2025-06-18T09:44:20.889Z",
+    "duration": 2770,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9633c120-ad25-4af1-a6af-6233947b6fc0",
+      "title": "",
+      "fullFile": "D:\\Tugas Sesi 7\\APITest\\apitest.js",
+      "file": "\\APITest\\apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6db14985-6be1-45be-b55e-34c98a19a77f",
+          "title": "API Reqres.in",
+          "fullFile": "D:\\Tugas Sesi 7\\APITest\\apitest.js",
+          "file": "\\APITest\\apitest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET user",
+              "fullTitle": "API Reqres.in GET user",
+              "timedOut": false,
+              "duration": 1517,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\");\nconst data = await response.json();\nexpect(response.status).to.equal(200);\nexpect(data.data.id).to.equal(2);",
+              "err": {},
+              "uuid": "905613c0-a24b-4e35-b1a5-9428a7ba8245",
+              "parentUUID": "6db14985-6be1-45be-b55e-34c98a19a77f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST create user",
+              "fullTitle": "API Reqres.in POST create user",
+              "timedOut": false,
+              "duration": 456,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users\", {\n  method: \"POST\",\n  headers: {\n    \"Content-Type\": \"application/json\",\n    \"x-api-key\": \"reqres-free-v1\"\n  },\n  body: JSON.stringify({\n    name: \"fikri\",\n    job: \"it support\"\n  })\n});\nconst data = await response.json();\nconsole.log(\"Status:\", response.status);\nconsole.log(\"Body:\", data);\nexpect(response.status).to.equal(201);\nexpect(data.name).to.equal(\"fikri\");\nexpect(data.job).to.equal(\"it support\");",
+              "err": {},
+              "uuid": "97856b1e-c5d1-4543-a3ba-5f905ff5e6c4",
+              "parentUUID": "6db14985-6be1-45be-b55e-34c98a19a77f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PATCH update user",
+              "fullTitle": "API Reqres.in PATCH update user",
+              "timedOut": false,
+              "duration": 375,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"PATCH\",\n  headers: {\n    \"Content-Type\": \"application/json\",\n    \"x-api-key\": \"reqres-free-v1\"\n  },\n  body: JSON.stringify({\n    name: \"Fikri Update\",\n    job: \"QA\"\n  })\n});\nconst data = await response.json();\nconsole.log(\"PATCH status:\", response.status);\nconsole.log(\"PATCH response:\", data);\nexpect(response.status).to.equal(200);\nexpect(data.name).to.equal(\"Fikri Update\");",
+              "err": {},
+              "uuid": "bbc88f14-dc06-4dfa-9527-5c706e32615a",
+              "parentUUID": "6db14985-6be1-45be-b55e-34c98a19a77f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE user",
+              "fullTitle": "API Reqres.in DELETE user",
+              "timedOut": false,
+              "duration": 389,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"DELETE\",\n  headers: {\n  \"Content-Type\": \"application/json\",\n  \"x-api-key\": \"reqres-free-v1\"\n},\n});\nexpect(response.status).to.equal(204);",
+              "err": {},
+              "uuid": "97ee13c0-a0df-43ae-a85f-ce7815a5d443",
+              "parentUUID": "6db14985-6be1-45be-b55e-34c98a19a77f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "905613c0-a24b-4e35-b1a5-9428a7ba8245",
+            "97856b1e-c5d1-4543-a3ba-5f905ff5e6c4",
+            "bbc88f14-dc06-4dfa-9527-5c706e32615a",
+            "97ee13c0-a0df-43ae-a85f-ce7815a5d443"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2737,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
